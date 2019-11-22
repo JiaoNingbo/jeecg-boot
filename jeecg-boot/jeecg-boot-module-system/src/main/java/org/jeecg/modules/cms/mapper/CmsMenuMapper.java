@@ -7,7 +7,7 @@ import org.jeecg.modules.cms.entity.CmsMenu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
- * @Description: CMD菜单
+ * @Description: CMS菜单
  * @Author: jeecg-boot
  * @Date:   2019-11-23
  * @Version: V1.0

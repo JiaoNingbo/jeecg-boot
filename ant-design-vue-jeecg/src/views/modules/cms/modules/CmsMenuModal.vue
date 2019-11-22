@@ -17,6 +17,30 @@
           label="name">
           <a-input placeholder="请输入name" v-decorator="['name', {}]" />
         </a-form-item>
+        <a-form-item
+          :labelCol="labelCol"
+          :wrapperCol="wrapperCol"
+          label="imageUrl">
+          <a-input placeholder="请输入imageUrl" v-decorator="['imageUrl', {}]" />
+        </a-form-item>
+        <a-form-item
+          :labelCol="labelCol"
+          :wrapperCol="wrapperCol"
+          label="serial">
+          <a-input-number v-decorator="[ 'serial', {}]" />
+        </a-form-item>
+        <a-form-item
+          :labelCol="labelCol"
+          :wrapperCol="wrapperCol"
+          label="type">
+          <a-input-number v-decorator="[ 'type', {}]" />
+        </a-form-item>
+        <a-form-item
+          :labelCol="labelCol"
+          :wrapperCol="wrapperCol"
+          label="hide">
+          <a-input-number v-decorator="[ 'hide', {}]" />
+        </a-form-item>
 		
       </a-form>
     </a-spin>
@@ -49,8 +73,8 @@
         validatorRules:{
         },
         url: {
-          add: "/org.jeecg.modules.cms/cmsMenu/add",
-          edit: "/org.jeecg.modules.cms/cmsMenu/edit",
+          add: "/cms/cmsMenu/add",
+          edit: "/cms/cmsMenu/edit",
         },
       }
     },
@@ -65,7 +89,7 @@
         this.model = Object.assign({}, record);
         this.visible = true;
         this.$nextTick(() => {
-          this.form.setFieldsValue(pick(this.model,'name'))
+          this.form.setFieldsValue(pick(this.model,'name','imageUrl','serial','type','hide'))
 		  //时间格式化
         });
 

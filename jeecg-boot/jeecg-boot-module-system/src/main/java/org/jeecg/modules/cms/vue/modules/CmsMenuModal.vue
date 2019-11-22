@@ -1,13 +1,13 @@
 <template>
-  <a-drawer
-      :title="title"
-      :width="800"
-      placement="right"
-      :closable="false"
-      @close="close"
-      :visible="visible"
-  >
-
+  <a-modal
+    :title="title"
+    :width="800"
+    :visible="visible"
+    :confirmLoading="confirmLoading"
+    @ok="handleOk"
+    @cancel="handleCancel"
+    cancelText="关闭">
+    
     <a-spin :spinning="confirmLoading">
       <a-form :form="form">
       
@@ -17,12 +17,34 @@
           label="name">
           <a-input placeholder="请输入name" v-decorator="['name', {}]" />
         </a-form-item>
+        <a-form-item
+          :labelCol="labelCol"
+          :wrapperCol="wrapperCol"
+          label="imageUrl">
+          <a-input placeholder="请输入imageUrl" v-decorator="['imageUrl', {}]" />
+        </a-form-item>
+        <a-form-item
+          :labelCol="labelCol"
+          :wrapperCol="wrapperCol"
+          label="serial">
+          <a-input-number v-decorator="[ 'serial', {}]" />
+        </a-form-item>
+        <a-form-item
+          :labelCol="labelCol"
+          :wrapperCol="wrapperCol"
+          label="type">
+          <a-input-number v-decorator="[ 'type', {}]" />
+        </a-form-item>
+        <a-form-item
+          :labelCol="labelCol"
+          :wrapperCol="wrapperCol"
+          label="hide">
+          <a-input-number v-decorator="[ 'hide', {}]" />
+        </a-form-item>
 		
       </a-form>
     </a-spin>
-    <a-button type="primary" @click="handleOk">确定</a-button>
-    <a-button type="primary" @click="handleCancel">取消</a-button>
-  </a-drawer>
+  </a-modal>
 </template>
 
 <script>
@@ -51,8 +73,8 @@
         validatorRules:{
         },
         url: {
-          add: "/org.jeecg.modules.cms/cmsMenu/add",
-          edit: "/org.jeecg.modules.cms/cmsMenu/edit",
+          add: "/cms/cmsMenu/add",
+          edit: "/cms/cmsMenu/edit",
         },
       }
     },
@@ -67,7 +89,7 @@
         this.model = Object.assign({}, record);
         this.visible = true;
         this.$nextTick(() => {
-          this.form.setFieldsValue(pick(this.model,'name'))
+          this.form.setFieldsValue(pick(this.model,'name','imageUrl','serial','type','hide'))
 		  //时间格式化
         });
 
@@ -122,10 +144,5 @@
 </script>
 
 <style lang="less" scoped>
-/** Button按钮间距 */
-  .ant-btn {
-    margin-left: 30px;
-    margin-bottom: 30px;
-    float: right;
-  }
+
 </style>

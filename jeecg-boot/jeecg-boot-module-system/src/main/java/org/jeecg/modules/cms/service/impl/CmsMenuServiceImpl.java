@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 /**
- * @Description: CMD菜单
+ * @Description: CMS菜单
  * @Author: jeecg-boot
  * @Date:   2019-11-23
  * @Version: V1.0

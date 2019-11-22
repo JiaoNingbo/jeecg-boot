@@ -16,7 +16,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import org.jeecgframework.poi.excel.annotation.Excel;
 
 /**
- * @Description: CMD菜单
+ * @Description: CMS菜单
  * @Author: jeecg-boot
  * @Date:   2019-11-23
  * @Version: V1.0
@@ -25,13 +25,13 @@ import org.jeecgframework.poi.excel.annotation.Excel;
 @TableName("cms_menu")
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@ApiModel(value="cms_menu对象", description="CMD菜单")
+@ApiModel(value="cms_menu对象", description="CMS菜单")
 public class CmsMenu {
     
 	/**id*/
 	@TableId(type = IdType.ID_WORKER_STR)
     @ApiModelProperty(value = "id")
-	private java.lang.Integer id;
+	private java.lang.String id;
 	/**name*/
 	@Excel(name = "name", width = 15)
     @ApiModelProperty(value = "name")
@@ -52,4 +52,24 @@ public class CmsMenu {
 	@Excel(name = "hide", width = 15)
     @ApiModelProperty(value = "hide")
 	private java.lang.Integer hide;
+	/**createBy*/
+	@Excel(name = "createBy", width = 15)
+    @ApiModelProperty(value = "createBy")
+	private java.lang.String createBy;
+	/**createTime*/
+	@Excel(name = "createTime", width = 20, format = "yyyy-MM-dd HH:mm:ss")
+	@JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd HH:mm:ss")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @ApiModelProperty(value = "createTime")
+	private java.util.Date createTime;
+	/**updateBy*/
+	@Excel(name = "updateBy", width = 15)
+    @ApiModelProperty(value = "updateBy")
+	private java.lang.String updateBy;
+	/**updateTime*/
+	@Excel(name = "updateTime", width = 20, format = "yyyy-MM-dd HH:mm:ss")
+	@JsonFormat(timezone = "GMT+8",pattern = "yyyy-MM-dd HH:mm:ss")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @ApiModelProperty(value = "updateTime")
+	private java.util.Date updateTime;
 }
