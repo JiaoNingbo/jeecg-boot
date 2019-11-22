@@ -1,14 +1,14 @@
 package org.jeecg.modules.cms.service.impl;
 
-import org.jeecg.modules.demo.org.jeecg.modules.cms.entity.CmsMenu;
-import org.jeecg.modules.demo.org.jeecg.modules.cms.mapper.CmsMenuMapper;
-import org.jeecg.modules.demo.org.jeecg.modules.cms.service.ICmsMenuService;
+import org.jeecg.modules.cms.entity.CmsMenu;
+import org.jeecg.modules.cms.mapper.CmsMenuMapper;
+import org.jeecg.modules.cms.service.ICmsMenuService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 /**
- * @Description: CMS菜单
+ * @Description: CMD菜单
  * @Author: jeecg-boot
  * @Date:   2019-11-23
  * @Version: V1.0

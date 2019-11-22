@@ -12,8 +12,8 @@ import org.jeecg.common.api.vo.Result;
 import org.jeecg.common.system.query.QueryGenerator;
 import org.jeecg.common.aspect.annotation.AutoLog;
 import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.demo.org.jeecg.modules.cms.entity.CmsMenu;
-import org.jeecg.modules.demo.org.jeecg.modules.cms.service.ICmsMenuService;
+import org.jeecg.modules.cms.entity.CmsMenu;
+import org.jeecg.modules.cms.service.ICmsMenuService;
 import java.util.Date;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -36,15 +36,15 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
  /**
- * @Description: CMS菜单
+ * @Description: CMD菜单
  * @Author: jeecg-boot
  * @Date:   2019-11-23
  * @Version: V1.0
  */
 @Slf4j
-@Api(tags="CMS菜单")
+@Api(tags="CMD菜单")
 @RestController
-@RequestMapping("/org.jeecg.modules.cms/cmsMenu")
+@RequestMapping("/cms/cmsMenu")
 public class CmsMenuController extends JeecgController<CmsMenu, ICmsMenuService> {
 	@Autowired
 	private ICmsMenuService cmsMenuService;
@@ -58,8 +58,8 @@ public class CmsMenuController extends JeecgController<CmsMenu, ICmsMenuService>
 	 * @param req
 	 * @return
 	 */
-	@AutoLog(value = "CMS菜单-分页列表查询")
-	@ApiOperation(value="CMS菜单-分页列表查询", notes="CMS菜单-分页列表查询")
+	@AutoLog(value = "CMD菜单-分页列表查询")
+	@ApiOperation(value="CMD菜单-分页列表查询", notes="CMD菜单-分页列表查询")
 	@GetMapping(value = "/list")
 	public Result<?> queryPageList(CmsMenu cmsMenu,
 								   @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
@@ -77,8 +77,8 @@ public class CmsMenuController extends JeecgController<CmsMenu, ICmsMenuService>
 	 * @param cmsMenu
 	 * @return
 	 */
-	@AutoLog(value = "CMS菜单-添加")
-	@ApiOperation(value="CMS菜单-添加", notes="CMS菜单-添加")
+	@AutoLog(value = "CMD菜单-添加")
+	@ApiOperation(value="CMD菜单-添加", notes="CMD菜单-添加")
 	@PostMapping(value = "/add")
 	public Result<?> add(@RequestBody CmsMenu cmsMenu) {
 		cmsMenuService.save(cmsMenu);
@@ -91,8 +91,8 @@ public class CmsMenuController extends JeecgController<CmsMenu, ICmsMenuService>
 	 * @param cmsMenu
 	 * @return
 	 */
-	@AutoLog(value = "CMS菜单-编辑")
-	@ApiOperation(value="CMS菜单-编辑", notes="CMS菜单-编辑")
+	@AutoLog(value = "CMD菜单-编辑")
+	@ApiOperation(value="CMD菜单-编辑", notes="CMD菜单-编辑")
 	@PutMapping(value = "/edit")
 	public Result<?> edit(@RequestBody CmsMenu cmsMenu) {
 		cmsMenuService.updateById(cmsMenu);
@@ -105,8 +105,8 @@ public class CmsMenuController extends JeecgController<CmsMenu, ICmsMenuService>
 	 * @param id
 	 * @return
 	 */
-	@AutoLog(value = "CMS菜单-通过id删除")
-	@ApiOperation(value="CMS菜单-通过id删除", notes="CMS菜单-通过id删除")
+	@AutoLog(value = "CMD菜单-通过id删除")
+	@ApiOperation(value="CMD菜单-通过id删除", notes="CMD菜单-通过id删除")
 	@DeleteMapping(value = "/delete")
 	public Result<?> delete(@RequestParam(name="id",required=true) String id) {
 		cmsMenuService.removeById(id);
@@ -119,8 +119,8 @@ public class CmsMenuController extends JeecgController<CmsMenu, ICmsMenuService>
 	 * @param ids
 	 * @return
 	 */
-	@AutoLog(value = "CMS菜单-批量删除")
-	@ApiOperation(value="CMS菜单-批量删除", notes="CMS菜单-批量删除")
+	@AutoLog(value = "CMD菜单-批量删除")
+	@ApiOperation(value="CMD菜单-批量删除", notes="CMD菜单-批量删除")
 	@DeleteMapping(value = "/deleteBatch")
 	public Result<?> deleteBatch(@RequestParam(name="ids",required=true) String ids) {
 		this.cmsMenuService.removeByIds(Arrays.asList(ids.split(",")));
@@ -133,8 +133,8 @@ public class CmsMenuController extends JeecgController<CmsMenu, ICmsMenuService>
 	 * @param id
 	 * @return
 	 */
-	@AutoLog(value = "CMS菜单-通过id查询")
-	@ApiOperation(value="CMS菜单-通过id查询", notes="CMS菜单-通过id查询")
+	@AutoLog(value = "CMD菜单-通过id查询")
+	@ApiOperation(value="CMD菜单-通过id查询", notes="CMD菜单-通过id查询")
 	@GetMapping(value = "/queryById")
 	public Result<?> queryById(@RequestParam(name="id",required=true) String id) {
 		CmsMenu cmsMenu = cmsMenuService.getById(id);
@@ -149,7 +149,7 @@ public class CmsMenuController extends JeecgController<CmsMenu, ICmsMenuService>
    */
   @RequestMapping(value = "/exportXls")
   public ModelAndView exportXls(HttpServletRequest request, CmsMenu cmsMenu) {
-      return super.exportXls(request, cmsMenu, CmsMenu.class, "CMS菜单");
+      return super.exportXls(request, cmsMenu, CmsMenu.class, "CMD菜单");
   }
 
   /**
