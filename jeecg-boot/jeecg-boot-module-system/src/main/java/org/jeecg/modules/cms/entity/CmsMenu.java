@@ -1,4 +1,4 @@
-package org.jeecg.modules.demo.org.jeecg.modules.cms.entity;
+package org.jeecg.modules.cms.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -31,9 +31,9 @@ public class CmsMenu {
 	/**id*/
 	@TableId(type = IdType.ID_WORKER_STR)
     @ApiModelProperty(value = "id")
-	private java.lang.Integer id;
+	private Integer id;
 	/**name*/
 	@Excel(name = "name", width = 15)
     @ApiModelProperty(value = "name")
-	private java.lang.String name;
+	private String name;
 }

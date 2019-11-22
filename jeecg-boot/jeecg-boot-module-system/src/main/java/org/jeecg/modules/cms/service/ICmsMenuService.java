@@ -1,4 +1,4 @@
-package org.jeecg.modules.demo.org.jeecg.modules.cms.service;
+package org.jeecg.modules.cms.service;
 
 import org.jeecg.modules.demo.org.jeecg.modules.cms.entity.CmsMenu;
 import com.baomidou.mybatisplus.extension.service.IService;

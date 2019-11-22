@@ -1,4 +1,4 @@
-package org.jeecg.modules.demo.org.jeecg.modules.cms.service.impl;
+package org.jeecg.modules.cms.service.impl;
 
 import org.jeecg.modules.demo.org.jeecg.modules.cms.entity.CmsMenu;
 import org.jeecg.modules.demo.org.jeecg.modules.cms.mapper.CmsMenuMapper;

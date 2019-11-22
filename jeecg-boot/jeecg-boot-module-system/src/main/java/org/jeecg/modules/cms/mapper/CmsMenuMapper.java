@@ -1,4 +1,4 @@
-package org.jeecg.modules.demo.org.jeecg.modules.cms.mapper;
+package org.jeecg.modules.cms.mapper;
 
 import java.util.List;
 

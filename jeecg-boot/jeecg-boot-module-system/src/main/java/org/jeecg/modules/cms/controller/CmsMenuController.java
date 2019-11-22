@@ -1,4 +1,4 @@
-package org.jeecg.modules.demo.org.jeecg.modules.cms.controller;
+package org.jeecg.modules.cms.controller;
 
 import java.util.Arrays;
 import java.util.List;
