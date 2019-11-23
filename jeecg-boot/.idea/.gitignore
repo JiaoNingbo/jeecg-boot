@@ -1,2 +1,25 @@
 # Default ignored files
 /workspace.xml
+# dev
+.DS_Store
+node_modules
+npm-debug.log
+
+# build
+/dist
+
+# editor
+.idea
+.vscode
+
+# log
+npm-debug.log
+lerna-debug.log
+
+#json
+package-lock.json
+
+#IDEA
+*.iml
+.editorconfig
+yarn-error.log
