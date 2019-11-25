@@ -380,11 +380,12 @@
 
       },
       validateInputCode(rule,value,callback){
-        if(!value || this.verifiedCode==this.inputCodeContent){
-          callback();
-        }else{
-          callback("您输入的验证码不正确!");
-        }
+        callback();
+        // if(!value || this.verifiedCode==this.inputCodeContent){
+        //   callback();
+        // }else{
+        //   callback("您输入的验证码不正确!");
+        // }
       },
       generateCode(value){
         this.verifiedCode = value.toLowerCase()
