@@ -40,6 +40,12 @@ public class OSSProperties {
 	 */
 	private String bucketName;
 
+
+	/**
+	 * OSS Bucket Domain Name.
+	 */
+	private String domainName;
+
 	/**
 	 * Additional OSS properties.
 	 */

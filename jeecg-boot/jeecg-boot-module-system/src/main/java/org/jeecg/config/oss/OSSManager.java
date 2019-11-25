@@ -8,8 +8,8 @@ import java.io.InputStream;
  */
 public interface OSSManager {
 
-	void upload(String fileName, InputStream inputStream);
+	void upload(String path, InputStream inputStream);
 
-	void delete(String fileName);
+	void delete(String path);
 
 }

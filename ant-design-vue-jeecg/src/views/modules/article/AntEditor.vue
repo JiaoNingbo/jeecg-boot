@@ -49,6 +49,9 @@
               </a-select>
             </a-form-item>
           </a-col>
+
+
+          
           <a-col :xl="{span: 7, offset: 1}" :lg="{span: 8}" :md="{span: 12}" :sm="24">
             <a-form-item label="摘要">
               <a-input

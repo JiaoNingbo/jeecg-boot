@@ -3,6 +3,7 @@ package org.jeecg.config.oss.aliyun;
 import java.io.InputStream;
 
 import com.aliyun.oss.OSS;
+import lombok.extern.slf4j.Slf4j;
 import org.jeecg.config.oss.OSSManager;
 import org.jeecg.config.oss.OSSProperties;
 
@@ -21,13 +22,13 @@ public class AliYunOSSManager implements OSSManager {
 	}
 
 	@Override
-	public void upload(String fileName, InputStream inputStream) {
-		this.client.putObject(this.properties.getBucketName(), fileName, inputStream);
+	public void upload(String path, InputStream inputStream) {
+		this.client.putObject(this.properties.getBucketName(), path, inputStream);
 	}
 
 	@Override
-	public void delete(String fileName) {
-		this.client.deleteObject(this.properties.getBucketName(), fileName);
+	public void delete(String path) {
+		this.client.deleteObject(this.properties.getBucketName(), path);
 	}
 
 }
