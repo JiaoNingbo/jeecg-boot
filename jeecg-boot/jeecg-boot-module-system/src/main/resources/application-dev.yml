@@ -185,3 +185,7 @@ logging:
 cas:
   prefixUrl: http://cas.example.org:8443/cas
 
+dingtalk:
+  robot:
+    webhook: https://oapi.dingtalk.com/robot/send?access_token=cbbaed3d37be45ae90790624b9e20e97728adb5aeb1813c482b92af976969af9
+    keyword: '~'
