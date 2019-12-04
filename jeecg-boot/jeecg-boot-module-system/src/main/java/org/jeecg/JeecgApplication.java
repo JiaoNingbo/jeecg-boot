@@ -11,10 +11,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
+/**
+ * @author jiaoningbo
+ */
 @Slf4j
 @EnableSwagger2
 @SpringBootApplication
-@EnableAutoConfiguration
 public class JeecgApplication {
 
   public static void main(String[] args) throws UnknownHostException {

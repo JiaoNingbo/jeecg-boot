@@ -184,3 +184,4 @@ logging:
 #cas单点登录
 cas:
   prefixUrl: http://cas.example.org:8443/cas
+
