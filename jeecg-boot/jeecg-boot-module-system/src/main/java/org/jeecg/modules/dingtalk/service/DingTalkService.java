@@ -7,6 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+/**
+ * 钉钉
+ *
+ * @author JiaoNingbo
+ * @version 1.0
+ * @date 2019/12/5 11:07
+ */
 @Slf4j
 @Service
 public class DingTalkService {
